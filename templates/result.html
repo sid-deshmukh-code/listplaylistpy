@@ -1,9 +1,18 @@
 <h1>{{ name }}</h1>
 
-<ul>
-    {% for item in name %}
-        <li><div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src=https://www.youtube.com/embed/{{item}} allowfullscreen></iframe>
-          </div></li>
-    {% endfor %}
-    </ul>
+
+    
+
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+        {% for item in name %}
+          <div class="carousel-item active">
+            
+            <iframe class="d-block w-100" src=https://www.youtube.com/embed/{{item}} allowfullscreen></iframe>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    
+  
