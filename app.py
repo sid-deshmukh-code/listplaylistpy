@@ -9,6 +9,13 @@ app = Flask(__name__)
 def index():
     if request.method == 'POST':
         url = request.form.get('url')
+        flag = "="
+        
+        index = url.index(flag)
+        a = url[index]
+        print("Character found at index", index)
+        print(a)
+    
         return render_template('result.html', name=url)
     return render_template('index.html')
 
