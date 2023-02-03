@@ -12,11 +12,11 @@ def index():
         flag = "="
         
         index = url.index(flag)
-        a = url[index]
+        a = url[index+1:]
         print("Character found at index", index)
         print(a)
     
-        return render_template('result.html', name=url)
+        return render_template('result.html', name=a)
     return render_template('index.html')
 
 
